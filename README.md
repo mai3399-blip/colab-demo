@@ -1,8 +1,9 @@
 # Creative ideas in Google Colab
 
 A beginner-friendly notebook that asks for an everyday object and uses the
-OpenAI Responses API with `gpt-6-luna` to suggest **one unusual, practical use**
-in 2-3 short sentences.
+OpenAI Responses API with `gpt-6-luna` to suggest **three numbered unusual, practical ideas** per object.
+Each idea is explained in 2-3 short sentences. Enter objects one at a time in a
+loop, and type `quit` to stop.
 
 ## Run it
 
@@ -10,8 +11,9 @@ in 2-3 short sentences.
 2. Choose **File > Upload notebook** and select `creative_ideas.ipynb`.
 3. Run the cells from top to bottom with their play buttons. The first code cell installs or updates the OpenAI SDK; no local Python installation or GPU is needed.
 4. Enter your OpenAI API key at the hidden `getpass` prompt.
-5. Enter an everyday object, for example `paper clip`. Read the generated idea.
-6. Run the final code cell again to try another object. It asks for the key again.
+5. Enter an everyday object, for example `paper clip`. Read the three numbered ideas.
+6. Keep entering more objects at the prompt. The same key is used throughout the loop.
+7. Type `quit` to stop (any capitalization works). Blank input asks you to try again without calling the API. To start a new session, rerun the final code cell and enter your key again.
 
 You need internet access, an [OpenAI API key](https://platform.openai.com/api-keys),
 model access, and available API credit. API usage may incur charges.
@@ -22,7 +24,7 @@ intentionally hidden to avoid exposing credentials.
 
 - Enter the key only at the runtime prompt. Never paste it into code, Markdown, outputs, the README, or Git.
 - The key stays in runtime memory and is passed directly to the SDK; it is not saved to a file or environment variable.
-- The notebook prints only the generated idea or a generic status message, never the key or raw exceptions.
+- The notebook prints only the generated ideas or a generic status message, never the key or raw exceptions.
 - Disconnect and delete the Colab runtime when finished to clear memory.
 - Clear all cell outputs and inspect the notebook before sharing or committing it.
 
